@@ -7,8 +7,11 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <Header />
-      <ContactForm />
+
+      <div className="flex flex-col mt-1 h-[calc(100vh-72px)]">
+        <Header />
+        <ContactForm />
+      </div>
     </div>
   );
 };

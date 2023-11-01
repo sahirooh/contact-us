@@ -4,8 +4,8 @@ import { IoCallOutline } from "react-icons/io5";
 
 const ContactForm = () => {
   return (
-    <div className="flex max-w-screen-xl m-auto mt-10">
-      <div className="flex flex-col gap-4 max-w-[472px] max-h-[457px]">
+    <div className="flex w-[1161px] mt-2 gap-[80px] ml-[196px] items-end">
+      <div className=" flex flex-col gap-4 max-w-[472px] h-[457px]">
         <div className="flex gap-8">
           <button className="bg-black text-white flex items-center justify-center font-semibold border-solid rounded w-[220px] px-[18px] py-[10px]">
             <MdOutlineMessage className="mr-2 text-xl" />
@@ -73,7 +73,7 @@ const ContactForm = () => {
         </form>
       </div>
 
-      <div>
+      <div className="flex mt-[-40px]">
         <img src="/images/service.svg" alt="service logo" />
       </div>
     </div>

@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <div className="max-w-screen-xl m-auto">
+    <div className="max-w-screen-xl ml-[188px]">
       <h1 className="flex font-extrabold text-5xl">CONTACT US</h1>
 
       <p className="flex font-semibold text-gray-600 max-w-[975px] mt-2">
