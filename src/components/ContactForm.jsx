@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdOutlineMessage } from "react-icons/md";
 import { IoCallOutline } from "react-icons/io5";
 
 const ContactForm = () => {
+  const [name, setName] = useState("Baby");
+  const [mail, setMail] = useState("hey@gmail.com");
+  const [text, setText] = useState("world");
+
+  const handleEvent = (event) => {
+    event.preventDefault();
+
+    setName(event.target[0].value);
+    setMail(event.target[1].value);
+    setText(event.target[2].value);
+  };
+
   return (
     <div className="flex w-[1161px] mt-2 gap-[80px] ml-[196px] items-end">
       <div className=" flex flex-col gap-4 max-w-[472px] h-[457px]">
@@ -22,7 +34,7 @@ const ContactForm = () => {
           VIA EMAIL FORM
         </button>
 
-        <form className="flex flex-col gap-4">
+        <form onSubmit={handleEvent} className="flex flex-col gap-4">
           <div className="flex flex-col w-full relative">
             <label
               htmlFor="name"
@@ -69,6 +81,14 @@ const ContactForm = () => {
             <button className="bg-black text-white font-semibold border-solid rounded-[5px] w-[220px] px-[18px] py-[10px]">
               SUBMIT
             </button>
+          </div>
+
+          <div>
+            {
+              <p>
+                {name} {mail} {text}
+              </p>
+            }
           </div>
         </form>
       </div>
